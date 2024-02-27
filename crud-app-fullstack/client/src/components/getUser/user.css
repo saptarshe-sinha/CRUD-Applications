@@ -1,0 +1,58 @@
+.userTable {
+    width: 60%;
+    background-color: white;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.065);
+    border-radius: 5px;
+    margin: 50px auto;
+    padding: 50px;
+}
+
+.addButton{
+    text-decoration: none;
+    background-color: purple;
+    color: white;
+    font-weight: 500;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.065);
+    border-radius: 5px;
+    padding: 10px;
+   
+}
+
+.userTable table{
+    width: 100%;
+    margin-top: 30px;
+    border-collapse: collapse;
+}
+
+.userTable table th {
+    background-color: purple;
+    color: white;
+    padding: 8px;
+}
+
+.userTable table td {
+    text-align: center;
+    padding: 8px;
+}
+
+.actionButton button {
+    border: 0;
+    outline: none;
+    padding: 8px 10px;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+ .actionButton a {  /*a is used for link tag */
+    padding: 6px 10px;
+    margin: 0 10px;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+
+

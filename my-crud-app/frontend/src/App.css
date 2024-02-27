@@ -1,0 +1,44 @@
+h2 {
+  padding: 10px;
+}
+
+.app .row {
+  display: flex;
+  padding: 10px;
+}
+
+input{
+  width: 200px;
+}
+
+.row div{
+  width: 110px;
+  margin-right: 30px;
+}
+
+.row button {
+  margin-left: 30px;
+  padding: 0px 15px;
+}
+
+select{
+  width: 200px;
+  margin-right: 30px;
+}
+
+.lower-part{
+  margin : 10px;
+}
+
+.table {
+  width: 80%;
+  max-width: 100%;
+  border-collapse: collapse;
+  
+}
+
+.table th,
+.table td {
+  border: 1px solid rgb(124, 123, 123);
+  height: 30px;
+}
