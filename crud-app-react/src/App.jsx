@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import employeeData from './Data/EmployeeData'
 import './App.css'
+import toast from 'react-hot-toast'
 
 
 
@@ -37,6 +38,7 @@ function App() {
       {
         const dt = data.filter((emp) => emp.id !== id)
         setData(dt)
+        toast.success("User Deleted Successfully", {position:"top---center"});
       }
     }
   }
@@ -46,12 +48,14 @@ function App() {
 
     if (user.firstName && user.lastName && user.age) {
       setData([...data, {...user, id: data.length+1}])
+      toast.success("User Added Successfully", {position:"top---center"});
+
       // setUser(initialUsers)
       handleClear()
       // console.log(data)
     }
     else {
-      alert("All data fields are required !!")
+      toast.error("All data fields are required !!", {position:"top---center", duration: 1500});
     }
    
   }
@@ -74,6 +78,7 @@ function App() {
     const updatedData = data.map((usr) => usr.id === editId ? {...user, id: editId} : usr);
 
     setData(updatedData)
+    toast.success("User Updated Successfully", {position:"top---center"});
     setEditId(null)
 
     handleClear()
@@ -81,13 +86,14 @@ function App() {
 
   const handleClear = () => {
      setUser(initialUsers)
+     setEditId(null)
    
   }
 
 
   return (
     <>
-    <div className='fw-bold'>
+    <div className='fw-bold mt-5'>
   
       <label htmlFor="fName">First Name</label>
       <input type="text" id='fName' name='firstName' className='mx-2' value={user.firstName} onChange={handleInput} />
